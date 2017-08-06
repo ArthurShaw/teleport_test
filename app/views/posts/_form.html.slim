@@ -1,0 +1,6 @@
+= simple_form_for(@post, remote: true) do |f|
+  .modal-body
+    = f.input :content, label: false, placeholder: 'Текст комментария'
+  .modal-footer
+    = f.button :submit, 'Подтвердить' , class: 'btn btn-success'
+    = link_to 'Отменить', '#', class: 'btn', data: {dismiss: 'modal'}

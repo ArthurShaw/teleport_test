@@ -1,0 +1,9 @@
+.modal-dialog
+  .modal-content
+  .modal-header
+    h3 Удалить комментарий
+  .modal-body
+    ul.errors
+  .modal-footer
+    = link_to 'Да', product_path(@post), method: :delete, remote: true, class: "btn btn-danger" %>
+    = link_to 'Нет', "#", class: "btn btn-default", data: { dismiss: "modal" } %>

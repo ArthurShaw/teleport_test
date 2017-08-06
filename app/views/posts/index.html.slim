@@ -1,0 +1,14 @@
+.container
+  h2 Комментарии
+  = link_to 'Все комментарии', posts_path, class: 'btn btn-success'
+  =< link_to 'Комментарии друзей', posts_path(query: 'friends'), class: 'btn btn-success'
+  =< link_to 'Мои комментарии', posts_path(query: 'mine'), class: 'btn btn-success'
+  table.table
+    thead
+      tr
+        th Автор
+        th Комментарий
+        th Время создания
+        th
+    tbody.post-index
+      = render 'index'

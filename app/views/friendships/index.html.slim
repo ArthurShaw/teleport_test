@@ -1,0 +1,30 @@
+.container
+  h2 Ваши друзья
+  br
+  - if current_user.friendships.present?
+    table.table
+      thead
+        tr
+          th Полное имя
+          th
+      tbody
+        - current_user.friendships.each do |friendship|
+          tr
+            td = friendship.friend.full_name
+            td = link_to "Удалить из друзей", friendship, method: :delete
+  - else
+    h4 У вас нет друзей
+  hr
+
+  h2 Остальные пользователи
+  - if @users.present?
+    table.table
+      thead
+        tr
+          th Полное имя
+          th
+      tbody
+        - @users.each do |user|
+          tr
+            td = user.full_name
+            td = link_to 'Добавить в друзья', friendships_path(friend_id: user), :method => :post

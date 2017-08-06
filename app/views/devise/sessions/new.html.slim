@@ -1,0 +1,21 @@
+.container
+  .col-lg-7
+    = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      legend Вход
+      .form-group
+        - unless current_user
+          = link_to "Войти с помощью Facebook", user_facebook_omniauth_authorize_path
+
+      .form-group
+        = f.input :login, label: false, required: false, autofocus: true, input_html: { class: 'form-control' }, placeholder: 'Логин'
+
+      .form-group
+        = f.input :password, label: false, required: false, input_html: { class: 'form-control' }, placeholder: 'Пароль'
+
+      .checkbox
+        = f.input :remember_me, label: "Запомнить меня", as: :boolean if devise_mapping.rememberable?
+
+      = f.button :submit, "Войти" , class: 'btn btn-lg btn-success btn-block'
+
+      hr
+      = link_to 'Регистрация', new_user_registration_path, class: 'btn btn-default'

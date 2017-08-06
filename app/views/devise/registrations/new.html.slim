@@ -1,0 +1,23 @@
+.container
+  .col-lg-7
+    = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      legend Регистрация
+      .form-group
+        = f.input :first_name, label: false, required: false, input_html: { class: 'form-control' }, placeholder: 'Имя'
+
+      .form-group
+        = f.input :last_name, label: false, required: false, input_html: { class: 'form-control' }, placeholder: 'Фамилия'
+
+      .form-group
+        = f.input :login, label: false, required: false, input_html: { class: 'form-control' }, placeholder: 'Логин'
+
+      .form-group
+        = f.input :email, label: false, required: false, autofocus: true, input_html: { class: 'form-control' }, placeholder: 'Эл.почта'
+
+      .form-group
+        = f.input :password, label: false, required: false, input_html: { class: 'form-control' }, placeholder: 'Пароль'
+
+      .form-group
+        = f.input :password_confirmation, label: false, required: false, input_html: { class: 'form-control' }, placeholder: 'Подтвердите пароль'
+      br
+        = f.button :submit, "Зарегистрироваться" , class: 'btn btn-lg btn-success btn-block'
