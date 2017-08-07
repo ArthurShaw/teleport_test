@@ -15,6 +15,7 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'simple_form'
 gem 'rails_12factor', group: :production
+gem 'dotenv-rails', :require => 'dotenv/rails-now'
 
 # front-end gems
 gem 'sass-rails', '~> 5.0'
@@ -34,7 +35,6 @@ group :development, :test do
 end
 
 group :development do
-  gem 'dotenv-rails'
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.0.5'
   gem 'spring'
