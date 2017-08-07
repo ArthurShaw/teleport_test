@@ -13934,23 +13934,6 @@ return jQuery;
 
 
 
-(function() {
-  $(function() {
-    var modal_holder_selector, modal_selector, url;
-    modal_holder_selector = '#modal-holder';
-    modal_selector = '.modal';
-    $(document).on('click', 'a[data-modal]', function() {
-      var location;
-      location = $(this).attr('href');
-      $.get(location, function(data) {
-        return $(modal_holder_selector).html(data).find(modal_selector).modal();
-      });
-      return false;
-    });
-    return $(document).on('ajax:success', 'form[data-modal]', function(event, data, status, xhr) {}, url = xhr.getResponseHeader('Location'), url ? window.location = url : ($('.modal-backdrop').remove(), $(modal_holder_selector).html(data).find(modal_selector).modal()), false);
-  });
-
-}).call(this);
 // This is a manifest file that'll be compiled into application.js, which will include all the files
 // listed below.
 //
@@ -13963,7 +13946,6 @@ return jQuery;
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-
 
 
 
