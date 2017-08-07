@@ -1,24 +1,18 @@
-# README
+# Teleport Twitter
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Тестовое задания для компании Телепорт.
 
-Things you may want to cover:
+# Инструкция запуска:
 
-* Ruby version
+  - Создать файлы database.yml и .env с индивидуальной конфигурацией на основе их темплейтов
+  - В терминале ввести bundle и дождать окончания установки
+  - Ввести rails db:create, потом rails db:migrate
+  - Запустить сервер - rails s
 
-* System dependencies
 
-* Configuration
+# Затраченное время
+  - Аутентификация (прямая и через Facebook) - 1 час
+  - "Друзья" - 2 часа (много времени потратил на составление запроса вывода "не друзей")
+  - CRUD по комментариям - 2 часа (JS и так далее) 
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+В сумме потрачено около 5 часов на все тестовое задание. 
