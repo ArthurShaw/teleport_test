@@ -14,6 +14,7 @@ gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'simple_form'
+gem 'rails_12factor', group: :production
 
 # front-end gems
 gem 'sass-rails', '~> 5.0'
